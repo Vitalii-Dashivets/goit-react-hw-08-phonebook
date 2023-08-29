@@ -56,6 +56,7 @@ const authSlice = createSlice({
     },
     [refreshUser.pending](state) {
       state.isRefreshing = true;
+      state.isLoading = true;
     },
     [refreshUser.rejected](state) {
       state.isRefreshing = false;

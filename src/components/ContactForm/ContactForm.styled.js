@@ -16,7 +16,7 @@ export const FormStyle = styled.form`
 
 export const InputStyle = styled.input`
   height: 30px;
-  width: 200px;
+  width: 210px;
   font-size: 20px;
   padding: 0 10px;
   border: 2px solid #f06292;
