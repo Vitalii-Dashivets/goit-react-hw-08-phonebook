@@ -21,13 +21,14 @@ export const ButtonStyle = styled.button`
   padding: 5px 25px;
   display: flex;
   align-items: center;
-  background-color: pink;
+  color: white;
+  background-color: #f06292;
   /* font-size: 20px; */
   border: none;
   border-radius: 25px;
   box-shadow: 2px 2px 2px 0px rgba(20, 20, 20, 0.5);
   &:hover {
-    background-color: rgba(250, 100, 225, 1);
+    background-color: #6699ff;
   }
 `;
 export const Name = styled.p`

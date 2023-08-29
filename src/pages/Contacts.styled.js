@@ -16,6 +16,7 @@ export const Global = createGlobalStyle`
        }`;
 
 export const AppSection = styled.div`
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
