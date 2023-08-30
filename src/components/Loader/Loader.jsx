@@ -7,6 +7,3 @@ export const Loader = () => {
     </Overlay>
   );
 };
-{
-  /* <ScaleLoader color="#d77136" />; */
-}
