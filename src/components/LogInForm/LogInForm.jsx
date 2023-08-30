@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { LogInBox, LogInForma } from './LoginForm.styled';
 import { logIn } from 'redux/auth/authOperations';
 import { useDispatch } from 'react-redux';
-import { red } from '@mui/material/colors';
 
 export const LogInForm = () => {
   const [email, setEmail] = useState('');
