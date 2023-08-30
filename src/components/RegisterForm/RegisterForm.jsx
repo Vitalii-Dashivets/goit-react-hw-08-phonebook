@@ -41,6 +41,20 @@ export const RegisterForm = () => {
           sx={{
             width: 300,
             marginBottom: 2,
+            '& label.Mui-focused': {
+              color: '#f06292',
+            },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#E0E3E7',
+              },
+              '&:hover fieldset': {
+                borderColor: '#B2BAC2',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#f06292',
+              },
+            },
           }}
           onChange={evt => setName(evt.target.value)}
         />
@@ -54,6 +68,20 @@ export const RegisterForm = () => {
           sx={{
             width: 300,
             marginBottom: 2,
+            '& label.Mui-focused': {
+              color: '#f06292',
+            },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#E0E3E7',
+              },
+              '&:hover fieldset': {
+                borderColor: '#B2BAC2',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#f06292',
+              },
+            },
           }}
           onChange={evt => setEmail(evt.target.value)}
         />
@@ -67,6 +95,20 @@ export const RegisterForm = () => {
           sx={{
             width: 300,
             marginBottom: 2,
+            '& label.Mui-focused': {
+              color: '#f06292',
+            },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': {
+                borderColor: '#E0E3E7',
+              },
+              '&:hover fieldset': {
+                borderColor: '#B2BAC2',
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: '#f06292',
+              },
+            },
           }}
           onChange={evt => setPassword(evt.target.value)}
         />

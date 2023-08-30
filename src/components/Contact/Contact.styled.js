@@ -21,22 +21,29 @@ export const ButtonStyle = styled.button`
   padding: 5px 25px;
   display: flex;
   align-items: center;
-  color: white;
-  background-color: #f06292;
+  color: #f06292;
+  /* background-color: #f06292; */
   /* font-size: 20px; */
-  border: none;
+  border: 2px solid #f06292;
   border-radius: 25px;
   box-shadow: 2px 2px 2px 0px rgba(20, 20, 20, 0.5);
   &:hover {
-    background-color: #6699ff;
+    background-color: #f06292;
+    color: white;
   }
 `;
 export const Name = styled.p`
+  font-size: 24px;
+  font-weight: 600;
+  color: #f06292;
   width: 380px;
   margin: 0;
 `;
 
 export const Number = styled.p`
+  font-size: 24px;
+  font-weight: 600;
+  color: #f06292;
   margin-right: auto;
   margin: 0;
 `;

@@ -24,16 +24,21 @@ export const NavLinkStyled = styled(NavLink)`
   display: inline-block;
   padding: 10px 25px;
   margin-right: 20px;
-  background-color: #f06292;
+  /* background-color: #f06292; */
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  border-radius: 17px;
-  color: white;
+  border: 2px solid #f06292;
+  border-radius: 20px;
+  color: #f06292;
   box-shadow: 2px 2px 2px 0px rgba(20, 20, 20, 0.5);
-  &:hover,
-  &:focus {
-    background-color: #6699ff;
+  &.active {
+    background-color: #f06292;
+    color: white;
+  }
+  &:hover {
+    background-color: #f06292;
+    color: white;
   }
 `;
 export const NavLinkPages = styled(NavLink)`
@@ -42,15 +47,17 @@ export const NavLinkPages = styled(NavLink)`
   font-weight: 700;
   margin-right: 30px;
   color: black;
-  padding: 5px 20px;
-  border-radius: 20px;
+
+  /* border-radius: 20px; */
 
   &.active {
-    background-color: #f06292;
-    color: white;
+    /* background-color: #f06292; */
+    color: #f06292;
+    border-bottom: 2px solid #f06292;
   }
   &:hover {
-    background-color: #6699ff;
+    /* background-color: #f06292; */
+    color: #f06292;
   }
 `;
 export const BoxPages = styled.div`

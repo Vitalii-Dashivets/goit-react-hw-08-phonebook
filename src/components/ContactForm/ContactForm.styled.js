@@ -7,6 +7,8 @@ export const FormStyle = styled.form`
   margin-bottom: 20px;
   width: 900px;
   padding: 20px;
+  font-weight: 600;
+  color: #f06292;
   /* border: 3px solid rgba(216, 116, 225, 1); */
   border-radius: 10px;
   background-color: rgba(230, 242, 255, 0.7);
@@ -15,16 +17,16 @@ export const FormStyle = styled.form`
 `;
 
 export const InputStyle = styled.input`
-  height: 30px;
+  height: 40px;
   width: 210px;
   font-size: 20px;
   padding: 0 10px;
-  border: 2px solid #f06292;
-  border-radius: 17px;
+  border: none;
+  border-radius: 20px;
   margin-left: 20px;
   margin-right: auto;
   &:focus {
-    outline-color: #6699ff;
+    outline-color: #f06292;
   }
 `;
 export const Label = styled.label`
@@ -33,17 +35,20 @@ export const Label = styled.label`
 `;
 
 export const ButtonStyle = styled.button`
-  padding: 10px 25px;
+  padding: 7px 25px;
   display: flex;
   align-items: center;
   /* height: 50px; */
-  background-color: #f06292;
+  /* background-color: #f06292; */
+  border: 2px solid #f06292;
+  color: #f06292;
   font-size: 20px;
-  color: white;
+  color: #f06292;
   border-radius: 25px;
-  border: none;
+
   box-shadow: 2px 2px 2px 0px rgba(20, 20, 20, 0.5);
   &:hover {
-    background-color: #6699ff;
+    background-color: #f06292;
+    color: white;
   }
 `;
