@@ -1,25 +1,17 @@
-import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { Contact } from 'components/Contact/Contact';
-import { selectVisibleContacts } from 'redux/selectors';
+import { useContacts } from 'hooks/useContacts';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/operations';
 import { List, ListContainer, Message } from './ContactList.styled';
 
 export function ContactList() {
   const dispatch = useDispatch();
-  const visibleContacts = useSelector(selectVisibleContacts);
+  const { visibleContacts } = useContacts();
 
   useEffect(() => {
     dispatch(fetchContacts('/contacts'));
   }, [dispatch]);
-
-  // const visibleContacts = useMemo(() => {
-  //   const normalizedFilter = filterValue.toLowerCase();
-  //   return contacts.filter(contact =>
-  //     contact.name.toLowerCase().includes(normalizedFilter, 0)
-  //   );
-  // }, [filterValue, contacts]);
 
   return (
     <ListContainer>

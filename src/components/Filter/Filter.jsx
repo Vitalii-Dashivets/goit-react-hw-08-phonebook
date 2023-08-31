@@ -1,14 +1,13 @@
 import React from 'react';
+import { useContacts } from 'hooks/useContacts';
 
-import { selectFilter, selectIsSorted } from 'redux/selectors';
-import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from 'redux/filterSlice';
-import { setSortByName } from 'redux/sortSlice';
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'redux/filter/filterSlice';
+import { setSortByName } from 'redux/sort/sortSlice';
 import { FilterStyle, FilterInput, FilterLabel } from './Filter.styled';
 import { Checkbox } from '@mui/material';
 export const Filter = () => {
-  const filter = useSelector(selectFilter);
-  const isSorted = useSelector(selectIsSorted);
+  const { filter, isSorted } = useContacts();
   const dispatch = useDispatch();
 
   const onChangeFilter = evt => dispatch(setFilter(evt.target.value));

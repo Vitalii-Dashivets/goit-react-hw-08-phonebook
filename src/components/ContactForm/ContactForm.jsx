@@ -1,21 +1,21 @@
 import React from 'react';
 import { useState } from 'react';
-import { selectContacts } from 'redux/selectors';
-import { useDispatch, useSelector } from 'react-redux';
 
+import { useDispatch } from 'react-redux';
+import { useContacts } from 'hooks/useContacts';
 import {
   FormStyle,
   InputStyle,
   ButtonStyle,
   Label,
 } from './ContactForm.styled';
-import { addContact } from 'redux/operations';
-import { setSortByName } from 'redux/sortSlice';
+import { addContact } from 'redux/contacts/operations';
+import { setSortByName } from 'redux/sort/sortSlice';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const contacts = useSelector(selectContacts);
+  const { contacts } = useContacts();
 
   const dispatch = useDispatch();
 

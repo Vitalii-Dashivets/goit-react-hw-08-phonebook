@@ -6,19 +6,18 @@ import Navigation from '../components/Navigation/Navigation';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { selectIsRefreshing } from 'redux/auth/authSelectors';
 import { refreshUser } from 'redux/auth/authOperations';
 import { Loader } from './Loader/Loader';
+import { useAuth } from 'hooks/useAuth';
 
-const Register = lazy(() => import('../pages/Register'));
-const Contacts = lazy(() => import('../pages/Contacts'));
-const Login = lazy(() => import('../pages/Login'));
-const Home = lazy(() => import('../pages/Home'));
-
+const Register = lazy(() => import('../pages/Register/Register'));
+const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
+const Login = lazy(() => import('../pages/Login/Login'));
+const Home = lazy(() => import('../pages/Home/Home'));
+const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 export const App = () => {
   const dispatch = useDispatch();
-  const isRefreshing = useSelector(selectIsRefreshing);
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
     dispatch(refreshUser());
@@ -46,6 +45,7 @@ export const App = () => {
             path="/contacts"
             element={<PrivateRoute redirectTo="/" element={<Contacts />} />}
           />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </div>

@@ -2,11 +2,11 @@ import React from 'react';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
-import { AppSection, TitleOne, TitleContacts } from '../pages/Contacts.styled';
+import { AppSection, TitleOne, TitleContacts } from './Contacts.styled';
 import { Loader } from 'components/Loader/Loader';
 
 import { useSelector } from 'react-redux';
-import { selectError, selectIsLoading } from 'redux/selectors';
+import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 
 const Contacts = () => {
   const isLoading = useSelector(selectIsLoading);

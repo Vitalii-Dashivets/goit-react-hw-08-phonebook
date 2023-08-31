@@ -1,7 +1,6 @@
-import { TextField } from '@mui/material';
 import { LogInBtn } from './LoginForm.styled';
 import { useState } from 'react';
-import { LogInBox, LogInForma } from './LoginForm.styled';
+import { LogInBox, LogInForma, CssTextField } from './LoginForm.styled';
 import { logIn } from 'redux/auth/authOperations';
 import { useDispatch } from 'react-redux';
 
@@ -27,58 +26,22 @@ export const LogInForm = () => {
   return (
     <LogInBox>
       <LogInForma onSubmit={handleSubmit}>
-        <TextField
+        <CssTextField
           required
           value={email}
           id="outlined-required"
           label="Email"
           name="email"
           placeholder="Enter your email"
-          sx={{
-            width: 300,
-            marginBottom: 2,
-            '& label.Mui-focused': {
-              color: '#f06292',
-            },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': {
-                borderColor: '#E0E3E7',
-              },
-              '&:hover fieldset': {
-                borderColor: '#B2BAC2',
-              },
-              '&.Mui-focused fieldset': {
-                borderColor: '#f06292',
-              },
-            },
-          }}
           onChange={evt => setEmail(evt.target.value)}
         />
-        <TextField
+        <CssTextField
           required
           value={password}
           name="password"
           id="outlined-required"
           label="Password"
           placeholder="Enter your password"
-          sx={{
-            width: 300,
-            marginBottom: 2,
-            '& label.Mui-focused': {
-              color: '#f06292',
-            },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': {
-                borderColor: '#E0E3E7',
-              },
-              '&:hover fieldset': {
-                borderColor: '#B2BAC2',
-              },
-              '&.Mui-focused fieldset': {
-                borderColor: '#f06292',
-              },
-            },
-          }}
           onChange={evt => setPassword(evt.target.value)}
         />
         <LogInBtn type="submit">LOG IN</LogInBtn>

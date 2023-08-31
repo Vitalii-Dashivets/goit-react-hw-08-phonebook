@@ -1,17 +1,13 @@
 import { Box, UserLogMenu, LogoutBtn } from './UserMenu.styled';
-import { useSelector } from 'react-redux';
-import { selectUser } from 'redux/auth/authSelectors';
 import { logOut } from 'redux/auth/authOperations';
 import { useDispatch } from 'react-redux';
 import { ImHappy } from 'react-icons/im';
+import { useAuth } from 'hooks/useAuth';
 
 export const UserMenu = () => {
-  const user = useSelector(selectUser);
+  const { user } = useAuth();
   const dispatch = useDispatch();
 
-  //   const handleLogOut = () => {
-  //     dispatch(logOut);
-  //   };
   return (
     <Box>
       <UserLogMenu>

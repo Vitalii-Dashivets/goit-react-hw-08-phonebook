@@ -1,6 +1,8 @@
-import styled from '@emotion/styled';
+import styledee from '@emotion/styled';
+import { TextField } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-export const RegisterBox = styled.div`
+export const RegisterBox = styledee.div`
   background-color: grey;
   padding: 50px;
   width: 400px;
@@ -11,7 +13,7 @@ export const RegisterBox = styled.div`
   box-shadow: 2px 3px 4px 2px rgba(20, 20, 20, 0.5);
 `;
 
-export const RegisterForma = styled.form`
+export const RegisterForma = styledee.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,7 +22,7 @@ export const RegisterForma = styled.form`
 
   /* height: 250px; */
 `;
-export const SignInBtn = styled.button`
+export const SignInBtn = styledee.button`
   display: inline-block;
   padding: 10px 25px;
   margin-right: 20px;
@@ -39,3 +41,21 @@ export const SignInBtn = styled.button`
     color: white;
   }
 `;
+export const CssTextField = styled(TextField)({
+  width: 300,
+  marginBottom: 15,
+  '& label.Mui-focused': {
+    color: '#f06292',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: '#C0C0C0',
+    },
+    '&:hover fieldset': {
+      borderColor: '#808080',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#f06292',
+    },
+  },
+});

@@ -1,5 +1,5 @@
 import { LogInForm } from 'components/LogInForm/LogInForm';
-import { Box } from './Home.styled';
+import { Box } from '../Home/Home.styled';
 
 const Login = () => {
   return (
