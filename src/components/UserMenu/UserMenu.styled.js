@@ -24,7 +24,7 @@ export const LogoutBtn = styled.button`
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-  border-radius: 17px;
+  border-radius: 20px;
   border: 2px solid #f06292;
   color: #f06292;
   box-shadow: 2px 2px 2px 0px rgba(20, 20, 20, 0.5);
