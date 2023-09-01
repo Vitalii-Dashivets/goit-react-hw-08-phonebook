@@ -1,6 +1,5 @@
 import React from 'react';
-import { lazy } from 'react';
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Navigation from '../components/Navigation/Navigation';
 import { RestrictedRoute } from './RestrictedRoute';
@@ -15,6 +14,7 @@ const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
 const Login = lazy(() => import('../pages/Login/Login'));
 const Home = lazy(() => import('../pages/Home/Home'));
 const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
+
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
@@ -43,7 +43,9 @@ export const App = () => {
           />
           <Route
             path="/contacts"
-            element={<PrivateRoute redirectTo="/" element={<Contacts />} />}
+            element={
+              <PrivateRoute redirectTo="/login" element={<Contacts />} />
+            }
           />
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -14,33 +14,6 @@ export const Header = styled.div`
   box-shadow: 2px 3px 3px 2px rgba(20, 20, 20, 0.5);
 `;
 
-export const Nav = styled.nav`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
-`;
-export const NavLinkStyled = styled(NavLink)`
-  display: inline-block;
-  padding: 10px 25px;
-  margin-right: 20px;
-  /* background-color: #f06292; */
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  border: 2px solid #f06292;
-  border-radius: 20px;
-  color: #f06292;
-  box-shadow: 2px 2px 2px 0px rgba(20, 20, 20, 0.5);
-  &.active {
-    background-color: #f06292;
-    color: white;
-  }
-  &:hover {
-    background-color: #f06292;
-    color: white;
-  }
-`;
 export const NavLinkPages = styled(NavLink)`
   text-decoration: none;
   font-size: 24px;

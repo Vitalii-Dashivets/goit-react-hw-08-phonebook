@@ -3,9 +3,9 @@ import { useAuth } from 'hooks/useAuth';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Loader } from 'components/Loader/Loader';
-import { BoxPages, Header, Nav, NavLinkPages } from './Navigation.styled';
-import { NavLinkStyled } from './Navigation.styled';
+import { BoxPages, Header, NavLinkPages } from './Navigation.styled';
 import { ImHome2, ImPhone } from 'react-icons/im';
+import { NavMenu } from 'components/NavMenu/NavMenu';
 
 const Navigation = () => {
   const { isLoggedIn } = useAuth();
@@ -26,14 +26,7 @@ const Navigation = () => {
           )}
         </BoxPages>
 
-        {!isLoggedIn ? (
-          <Nav>
-            <NavLinkStyled to="/register">SIGN UP</NavLinkStyled>
-            <NavLinkStyled to="/login">LOG IN</NavLinkStyled>
-          </Nav>
-        ) : (
-          <UserMenu />
-        )}
+        {!isLoggedIn ? <NavMenu /> : <UserMenu />}
       </Header>
       <Suspense fallback={<Loader />}>
         {' '}
